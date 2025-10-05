@@ -1,0 +1,90 @@
+/* NAVBAR */
+.navbar {
+  background-color: #0b2db4;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background-image: url('depan-sekolah.jpg'); /* Ganti dengan foto sekolahmu */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 45, 180, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* SECTION PPDB */
+.ppdb-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f5f7ff;
+}
+
+.ppdb-section h2 {
+  color: #0b2db4;
+}
+
+.btn {
+  background-color: #0b2db4;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: #274bdb;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0b2db4;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
