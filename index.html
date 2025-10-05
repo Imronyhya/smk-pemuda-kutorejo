@@ -1,165 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SMK Pemuda Kutorejo - Website Resmi</title>
-  <meta name="description" content="Website resmi SMK Pemuda Kutorejo - Informasi pendaftaran, jurusan, fasilitas, kontak." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sekolahku</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f7fafc; --card:#ffffff; --accent:#1967d2; --muted:#6b7280; --radius:12px;
-      --container:1100px;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:#111}
-    .container{max-width:var(--container); margin:0 auto; padding:24px}
-    header{background:linear-gradient(180deg, rgba(25,103,210,0.06), transparent);}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:48px;width:48px;object-fit:contain;border-radius:8px}
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    nav a{color:var(--accent);text-decoration:none;font-weight:600}
-    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
-.hero h1{font-size:32px;margin:0 0 10px}
-.hero p{margin:0 0 18px;color:var(--muted)}
-.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.06);padding:18px}
-.departments{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-.dept{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid #eef3ff}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
-.gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-
-footer{padding:28px 0;color:var(--muted);font-size:14px}
-
-/* responsive */
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;}
-  .departments,.features{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:600px){
-  nav ul{display:none}
-  .brand img{height:40px;width:40px}
-  .departments,.features{grid-template-columns:1fr}
-  .hero h1{font-size:24px}
-}
-
-/* mobile menu button */
-.mobile-menu{display:none}
-@media (max-width:600px){.mobile-menu{display:block}}
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <div class="container">
-      <div class="nav">
-        <div class="brand">
-          <img src="logo.png" alt="Logo Sekolah" onerror="this.src='https://via.placeholder.com/80x80?text=Logo'">
-          <div>
-            <div style="font-weight:700">SMK Contoh</div>
-            <div style="font-size:12px;color:var(--muted)">Jl. Pendidikan No.1, Kecamatan Contoh</div>
-          </div>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#jurusan">Jurusan</a></li>
-            <li><a href="#fasilitas">Fasilitas</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+    <nav class="navbar">
+      <div class="logo">Sekolahku</div>
+      <ul class="nav-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Media</a></li>
+
+        <!-- Dropdown Profil -->
+        <li class="dropdown">
+          <a href="#">Profil ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Sejarah Sekolah</a></li>
+            <li><a href="#">Visi & Misi</a></li>
+            <li><a href="#">Struktur Organisasi</a></li>
           </ul>
-        </nav>
-        <div style="display:flex;gap:10px;align-items:center">
-          <a class="btn" href="#pendaftaran">Daftar</a>
-          <button class="mobile-menu" aria-label="menu" onclick="toggleNav()">☰</button>
-        </div>
-      </div>
-    </div>
-  </header>  <main class="container" id="home">
-    <section class="hero">
-      <div>
-        <h1>Selamat datang di SMK Pemuda Kutorejo</h1>
-        <p>SMK Contoh — menyiapkan peserta didik menjadi tenaga profesional di bidang teknologi dan otomotif. Daftar sekarang untuk tahun ajaran baru.</p>
-        <div style="display:flex;gap:12px">
-          <a class="btn" href="#pendaftaran">Daftar Sekarang</a>
-          <a href="#jurusan" style="align-self:center;text-decoration:none;color:var(--muted);font-weight:600">Lihat Jurusan →</a>
-        </div><div class="card" style="margin-top:20px">
-      <strong>Info Pendaftaran</strong>
-      <p style="margin:8px 0 0;color:var(--muted)">Gelombang 1: 1 Juni - 30 Juni • Biaya pendaftaran: Gratis • Hubungi: pendaftaran@smkcontoh.sch.id</p>
-    </div>
-  </div>
+        </li>
 
-  <aside class="card">
-    <h3 style="margin-top:0">Profil Singkat</h3>
-    <p style="color:var(--muted)">SMK Pemuda Kutorjo berdiri sejak 2002. Visi: Menjadi lembaga pendidikan vokasi unggul yang siap bersaing di tingkat nasional.</p>
-    <div style="margin-top:12px">
-      <strong>Kontak</strong>
-      <p style="margin:6px 0 0;color:var(--muted)">Telp: (021) 555-1234<br>Email: info@smkcontoh.sch.id</p>
-    </div>
-  </aside>
-</section>
+        <li><a href="#">Kontak</a></li>
 
-<section id="jurusan">
-  <h2>Jurusan Unggulan</h2>
-  <div class="departments">
-    <div class="dept">
-      <h4>Teknik Komputer & Jaringan (TKJ)</h4>
-      <p style="color:var(--muted);margin:8px 0 0">Belajar dasar jaringan, instalasi server, keamanan jaringan, dan pengelolaan infrastruktur.</p>
-    </div>
-    <div class="dept">
-      <h4>Teknik Kendaraan Ringan (TKR)</h4>
-      <p style="color:var(--muted);margin:8px 0 0">Perbaikan dan perawatan kendaraan bermotor, diagnosa sistem mesin dan kelistrikan.</p>
-    </div>
-  </div>
-</section>
+        <!-- Dropdown Ekstrakurikuler -->
+        <li class="dropdown">
+          <a href="#">Ekstrakurikuler ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Pramuka</a></li>
+            <li><a href="#">PMR</a></li>
+            <li><a href="#">Futsal</a></li>
+          </ul>
+        </li>
+      </ul>
+      <input type="text" placeholder="Cari..." class="search-bar">
+    </nav>
+  </header>
 
-<section id="fasilitas" style="margin-top:18px">
-  <h2>Fasilitas</h2>
-  <div class="features">
-    <div class="card"><strong>Laboratorium TKJ</strong><p style="color:var(--muted);margin:8px 0 0">Komputer modern dan jaringan praktikum.</p></div>
-    <div class="card"><strong>Bengkel TKR</strong><p style="color:var(--muted);margin:8px 0 0">Peralatan lengkap untuk praktik otomotif.</p></div>
-  </div>
-
-  <div class="gallery" style="margin-top:16px">
-    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=60&auto=format&fit=crop" alt="lab">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=60&auto=format&fit=crop" alt="bengkel">
-  </div>
-</section>
-
-<section id="pendaftaran" style="margin-top:22px">
-  <h2>Pendaftaran</h2>
-  <div class="card">
-    <p style="color:var(--muted);margin:0">Syarat: Fotokopi ijazah/rapor, pas foto 3x4, dan formulir pendaftaran. Lengkapi dokumen dan kirim ke email pendaftaran@smkcontoh.sch.id atau datang langsung ke sekolah.</p>
-    <div style="margin-top:12px;display:flex;gap:8px">
-      <a class="btn" href="mailto:pendaftaran@smkcontoh.sch.id?subject=Pendaftaran%20SMK%20Contoh">Kirim Email Pendaftaran</a>
-      <a href="#kontak" style="align-self:center;text-decoration:none;color:var(--muted);font-weight:600">Alamat & Jam Layanan →</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>SMA N 1 Lorem Ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nihil sed veritatis aut corporis numquam earum porro temporibus excepturi eos.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="kontak" style="margin-top:22px">
-  <h2>Kontak & Lokasi</h2>
-  <div class="card">
-    <p style="margin:0 0 8px">Alamat: Jl. Mayjen H. Soemadi, Kutorejo</p>
-    <p style="margin:0 0 8px">Jam Layanan: Senin - Jumat, 08.00 - 15.00</p>
-    <p style="margin:0 0 8px">Email: info@smkcontoh.sch.id • Telp: (021) 555-1234</p>
-    <div style="margin-top:12px">
+  <!-- Info Cards -->
+  <section class="info-section">
+    <div class="info-card slide-up">
+      <div class="icon">🎓</div>
+      <h3>100</h3>
+      <p>Siswa Aktif</p>
     </div>
-</section>
+    <div class="info-card slide-up">
+      <div class="icon">👩‍🏫</div>
+      <h3>16</h3>
+      <p>Guru</p>
+    </div>
+    <div class="info-card slide-up">
+      <div class="icon">💼</div>
+      <h3>9</h3>
+      <p>Staf</p>
+    </div>
+    <div class="info-card slide-up">
+      <div class="icon">🎭</div>
+      <h3>3</h3>
+      <p>Ekstrakurikuler</p>
+    </div>
+  </section>
 
-  </main>  <footer class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
-      <div>© <strong>SMK PEMUDA KUTOREJO</strong> • Semua hak cipta dilindungi</div>
-      <div style="color:var(--muted)">Dibuat dengan ❤️ • smkpemudakutorejo</div>
-    </div>
-  </footer>  <script>
-    function toggleNav(){
-      const ul = document.querySelector('nav ul');
-      if(!ul) return;
-      if(ul.style.display==='flex'){ul.style.display='none'}else{ul.style.display='flex'}
-    }
-  </script></body>
+  <!-- Profil -->
+  <section class="profil fade-in">
+    <h2>Profil Organisasi</h2>
+    <p>Bagian ini dapat diisi dengan informasi tentang sekolah, visi, misi, dan sejarahnya.</p>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 Sekolahku. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // --- Animasi scroll muncul (fade-in dan slide-up) ---
+    const faders = document.querySelectorAll('.fade-in, .slide-up');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
 </html>
