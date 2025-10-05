@@ -197,20 +197,6 @@ body {
 }
 
 /* NAVBAR */
-.navbar {
-  background-color: #003366;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
 .navbar ul {
   list-style: none;
   display: flex;
