@@ -189,3 +189,144 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #00bfff;
+}
+
+/* HERO */
+.hero {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: #00bfff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  background: white;
+  color: #003366;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+/* PROFIL */
+.profil ul {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* KEPSEK */
+.kepsek-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kepsek-box img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* JURUSAN */
+.jurusan-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.jurusan-box {
+  background: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  transition: transform 0.3s ease;
+}
+.jurusan-box:hover {
+  transform: scale(1.05);
+}
+
+/* TESTIMONI */
+.testi-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.testi-box {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  font-style: italic;
+  transition: 0.3s;
+}
+.testi-box:hover {
+  background: #e6f0ff;
+}
+
+/* KONTAK */
+.kontak {
+  background: #003366;
+  color: white;
+}
+footer {
+  background: #00264d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
