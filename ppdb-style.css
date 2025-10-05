@@ -32,7 +32,7 @@
 /* HERO SECTION */
 .hero {
   position: relative;
-  background-image:"WhatsApp.jpeg";
+  background-image: url('WhatsApp.jpeg')
   background-size: cover;
   background-position: center;
   height: 300px;
